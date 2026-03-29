@@ -3,7 +3,7 @@
 [![CI](https://github.com/mefai-dev/mefai-risk-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/mefai-dev/mefai-risk-ai/actions/workflows/ci.yml)
 
 
-AI-powered cryptocurrency risk assessment using a Temporal Fusion Transformer (BiLSTM + multi-head attention) trained on Binance market data.
+AI powered cryptocurrency risk assessment using a Temporal Fusion Transformer (BiLSTM + multi head attention) trained on Binance market data.
 
 ## Features
 
@@ -58,8 +58,8 @@ python examples/quick_start.py
 
 | Variable | Description | Default |
 |---|---|---|
-| `MEFAI_COINS` | Comma-separated coin list | BTC,ETH,BNB,... |
-| `MEFAI_TIMEFRAMES` | Comma-separated timeframes | 1h,4h,1d |
+| `MEFAI_COINS` | Space separated coin list | BTC,ETH,BNB,... |
+| `MEFAI_TIMEFRAMES` | Space separated timeframes | 1h,4h,1d |
 | `MEFAI_EPOCHS` | Max training epochs | 500 |
 | `MEFAI_BATCH_SIZE` | Batch size | 32 |
 | `MEFAI_WINDOW_SIZE` | Candles to download per timeframe | 256 |
