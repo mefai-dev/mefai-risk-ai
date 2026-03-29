@@ -1,5 +1,8 @@
 # mefai-risk-ai
 
+[![CI](https://github.com/mefai-dev/mefai-risk-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/mefai-dev/mefai-risk-ai/actions/workflows/ci.yml)
+
+
 AI-powered cryptocurrency risk assessment using a Temporal Fusion Transformer (BiLSTM + multi-head attention) trained on Binance market data.
 
 ## Features
