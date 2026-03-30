@@ -184,3 +184,26 @@ class FeatureEngine:
             labels = np.concatenate([np.zeros(target_len - len(labels)), labels])
 
         return features.astype(np.float32), labels.astype(np.float32)
+
+
+def compute_drawdown_duration(equity_curve):
+    """Calculate maximum drawdown duration in periods.
+
+    Returns the longest streak of being below the previous
+    equity high watermark.
+    """
+    import numpy as np
+    peak = np.maximum.accumulate(equity_curve)
+    in_drawdown = equity_curve < peak
+    durations = []
+    current = 0
+    for dd in in_drawdown:
+        if dd:
+            current += 1
+        else:
+            if current > 0:
+                durations.append(current)
+            current = 0
+    if current > 0:
+        durations.append(current)
+    return max(durations) if durations else 0
