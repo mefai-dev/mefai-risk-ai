@@ -29,7 +29,7 @@ class FeatureEngine:
 
     Each timeframe produces exactly ``cfg.N_FEATURES`` columns.
     On-chain metrics are appended as 8 additional columns (constant per
-    row — they are scalar snapshots, not time-series).
+    row ··· they are scalar snapshots, not time-series).
 
     Total width per sample:
         ``len(cfg.TIMEFRAMES) * cfg.N_FEATURES + 8``
@@ -147,7 +147,7 @@ class FeatureEngine:
                 feat_df = self.compute_timeframe_features(df)
                 arr = feat_df.values[-target_len:]
             else:
-                logger.warning("Timeframe %s missing or too short — filling zeros", tf)
+                logger.warning("Timeframe %s missing or too short ··· filling zeros", tf)
                 arr = np.zeros((target_len, self.cfg.N_FEATURES))
 
             # Pad if shorter than target_len

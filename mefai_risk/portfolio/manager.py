@@ -2,7 +2,7 @@
 
 Bug fix vs. original RISKAI.txt
 -------------------------------
-* Original called ``self.model.evaluate(dataloader)`` — but ``evaluate``
+* Original called ``self.model.evaluate(dataloader)`` ··· but ``evaluate``
   lives on :class:`RiskTrainer`, not on the PyTorch model.  The manager
   now accepts a ``trainer`` and delegates evaluation to it.
 """

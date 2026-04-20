@@ -112,7 +112,7 @@ class TemporalFusionTransformer(nn.Module):
         attn = self.feature_attention(attn) + attn
         attn = self.layer_norm(attn)
 
-        # Decoder — initialise with the last-layer forward hidden state
+        # Decoder ··· initialise with the last-layer forward hidden state
         dec_out, _ = self.decoder_lstm(attn, (h_n[:1], c_n[:1]))
 
         last_hidden = dec_out[:, -1, :]  # (batch, hidden_size)
